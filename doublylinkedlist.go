@@ -11,7 +11,7 @@ type Value struct {
 	MilesAway int
 }
 type Node struct {
-	Value				// Embedded struct
+	Value				
 	next, prev  *Node
 }
 type List struct {
@@ -26,16 +26,16 @@ func (n *Node) Next() *Node {
 func (n *Node) Prev() *Node {
 	return n.prev
 }
-// Create new node with value
+
 func (l *List) Push(v Value) *List {
 	n := &Node{Value: v}
 	if l.head == nil {
-		l.head = n		// First node
+		l.head = n	
 	} else {
-		l.tail.next = n	// Add after prev last node
-		n.prev = l.tail // Link back to prev last node
+		l.tail.next = n	
+		n.prev = l.tail 
 	}
-	l.tail = n  		// reset tail to newly added node
+	l.tail = n  		
 	return l
 }
 func (l *List) Find(name string) *Node {
