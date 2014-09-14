@@ -9,7 +9,7 @@ import "fmt"
 type Any interface{}
 
 type Node struct {
-    Data     Any
+    Data Any
     NextLink *Node
 }
 
@@ -68,7 +68,7 @@ func (s *SLL) InsertLast(newnode *Node) int {
         current = current.GetNext()
     }
     current.SetNext(newnode)
-    return s.count
+    return s.count-1
 }
 
 // Insert to Nth Node: O(N)
