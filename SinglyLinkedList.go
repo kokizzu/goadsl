@@ -249,6 +249,7 @@ func (s *SLL) Print() {
     }
     current := s.Head
     pos := 0
+    fmt.Print("| ")
     for current != nil {
         fmt.Printf("%d: %#v | ",pos, current.Data)
         current = current.GetNext()
