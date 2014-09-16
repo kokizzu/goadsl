@@ -10,62 +10,57 @@ type Any interface{}
 
 type Queue struct {
 	data []Any
-	head, tail, count int
-	size int
 }
 
-func NewQueue(size int) *Queue {
+// Create a new queue: O(1)
+func NewQueue() *Queue {
 	var q Queue
-	q.data = make([]Any,size)
-	q.head, q.tail, q.count = 0, 0, 0
-	q.size = size
+	q.data = make([]Any,0,0)
 	return &q
 }
 
+// Return size: O(1)
 func (q *Queue) Count() int {
-	return q.count
+	return len(q.data)
 }
 
+// Text whether queue is empty: O(1)
 func (q *Queue) IsEmpty() bool {
-	if q.tail == 0 { return true }
+	if len(q.data) == 0 { return true }
 	return false
 }
 
+// Access first element: O(1)
 func (q *Queue) Front() Any {
-	return q.data[q.head]
+	if len(q.data) == 0 { return nil }
+	return q.data[0]
 }
 
+// Access last element: O(1)
 func (q *Queue) Back() Any {
-	return q.data[q.tail-1]
+	if len(q.data) == 0 { return nil }
+	return q.data[len(q.data)-1]
 }
 
+// Insert new element into the end of queue: O(1)
 func (q *Queue) enqueue(data Any) {
-	if q.count < q.size {
-		q.data[q.tail] = data
-		q.tail = (q.tail+1)%q.size
-		q.count++
-		q.size++
-	}
+	q.data = append(q.data,data)
 }
 
+// Remove first element from queue: O(1)
 func (q *Queue) dequeue() Any {
-	if q.count != 0 {
-		front := q.data[q.head]
-		q.head = (q.head+1)%q.size
-		q.count--
-		return front
-	}
-	return nil
+	if len(q.data) == 0 { return nil }
+	data := q.data[0]
+	q.data = q.data[1:]
+	return data
 }
 
+// Print first N elements from queue: O(N)
 func (q *Queue) PrintN(n int) {
-	if (q.count == 0) { fmt.Println("NIL"); return }
+	if len(q.data) == 0 { fmt.Println("| Empty |"); return }
 	fmt.Print("|")
-	in := q.head
-	for i := 0; i < n; i++ {
-		fmt.Printf(" %d: %#v |", i, q.data[in])
-		in = (in+1)%q.size
-		if in == q.head { break }
+	for i := 0; (i < len(q.data)) && (i < n); i++ {
+		fmt.Printf(" %d: %#v |", i, q.data[i])
 	}
 	fmt.Println()
 }
@@ -79,7 +74,7 @@ func RandInt(min, max int) int {
 }
 
 func main() {
-	q := NewQueue(100)
+	q := NewQueue()
 	fmt.Println("Enqueue Numbers")
 	for i := 0; i < 6; i++ {
 		a := RandInt(0,100)
@@ -102,5 +97,4 @@ func main() {
 		if i == 6 { fmt.Println() } else { fmt.Print(" ") }
 	}
 	q.PrintN(q.Count())
-
 }
