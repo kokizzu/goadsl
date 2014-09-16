@@ -80,7 +80,7 @@ func RandInt(min, max int) int {
 
 func main() {
 	q := NewQueue(100)
-	fmt.Println("Enqueue Angka")
+	fmt.Println("Enqueue Numbers")
 	for i := 0; i < 6; i++ {
 		a := RandInt(0,100)
 		fmt.Print(a)
