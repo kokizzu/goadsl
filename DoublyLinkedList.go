@@ -1,5 +1,5 @@
 /*
-    Doubly Linked List
+    Doubly Linked List Interface
 */
 
 package main
@@ -312,29 +312,112 @@ func (d *DLL) PrintTailToHead() {
 
 func main() {
     d := NewDLL()
+    fmt.Println("Kondisi Awal DLL:")
     d.PrintHeadToTail()                     // empty
+
+    fmt.Println()
+    fmt.Println("Masukan string world dari depan:")
     d.InsertFirst(&Node{"world", nil, nil}) // "world"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Masukan string hello dari depan:")
     d.InsertFirst(&Node{"hello", nil, nil}) // "hello" "world"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Masukan string ! dari belakang:")
     d.InsertLast(&Node{"!", nil, nil})      // "hello" "world" "!"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Masukan integer(13) ke posisi kedua(1,ingat index mulai dari 0):")
     d.InsertNth(&Node{13, nil, nil}, 1)     // "hello" 13 "world" "!"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Masukan float(3.14) ke posisi empat(3,ingat index mulai dari 0):")
     d.InsertNth(&Node{3.14, nil, nil},3)    // "hello" 13 "world" 3.14 "!"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Cetak DLL dari depan ke belakang (head to tail):")
     d.PrintHeadToTail()                     // "hello" 13 "world" 3.14 "!"
+
+
+    fmt.Println()
+    fmt.Println("Cetak DLL dari belakang ke depan (tail to head):")
     d.PrintTailToHead()                     // "!" 3.14 "world" 13 "hello"
+
+
+    fmt.Println()
+    fmt.Println("Hapus yang paling depan(head):")
     d.DeleteFirst()                         // 13 "world" 3.14 "!"
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Hapus yang paling belakang(tail):")
     d.DeleteLast()                          // 13 "world" 3.14
+    d.PrintHeadToTail()
+
+
+    fmt.Println()
+    fmt.Println("Hapus yang posisi kedua(1,ingat index mulai dari 0):")
     d.DeleteNth(1)                          // 13 3.14
     d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Hapus semuanya:")
     d.DeleteAll()                           // empty
     d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Masukkan 5 integer dari belakang:")
     for i := 0; i < 5; i++ {
         d.InsertLast(&Node{i, nil, nil})
+        d.PrintHeadToTail()
     }                                       // 0 1 2 3 4
+    fmt.Println()
+    fmt.Println("Kondisi DLL sekarang:")
     d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 4(3, index dari 0) ke depan")
     d.MoveNthToFirst(3)                     // 3 0 1 2 4
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 3(2, index dari 0) ke belakang")
     d.MoveNthToLast(2)                      // 3 0 2 4 1
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 1(0, index dari 0) ke posisi 3(2)")
     d.MoveNthToNth(0,2)                     // 0 2 3 4 1
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 3(2, index dari 0) ke posisi 5(4)")
     d.MoveNthToNth(2,4)                     // 0 2 4 1 3
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 5(4, index dari 0) ke posisi 1(0)")
     d.MoveNthToNth(4,1)                     // 0 3 2 4 1
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi 4(3, index dari 0) ke posisi 1(0)")
     d.MoveNthToNth(3,0)                     // 4 0 3 2 1
+    d.PrintHeadToTail()
+
+    fmt.Println()
+    fmt.Println("Kondisi akhir DLL:")
     d.PrintHeadToTail()
 }
