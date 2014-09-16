@@ -16,3 +16,5 @@ TODO:
 =====
 * fix SliceQueue so it can have unlimited number of length
 * fix SliceQueue so we won't need to store the Front (always zero) (use slice[1:] after dequeue)
+* add fmt.Println("test name") on main on SinglyLinkedList and DoublyLinkedList
+* add big Oh on each function
