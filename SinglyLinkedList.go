@@ -1,5 +1,5 @@
 /*
-    Singly Linked List
+    Singly Linked List Interface
 */
 
 package main
@@ -260,26 +260,86 @@ func (s *SLL) Print() {
 
 func main() {
     s := NewSLL()
+    fmt.Println("Kondisi Awal DLL:")
     s.Print()                           // empty
+
+    fmt.Println()
+    fmt.Println("Masukan integer(1) dari depan:")
     s.InsertFirst(&Node{1, nil})        // 1
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Masukan string hello dari depan:")
     s.InsertFirst(&Node{"hello", nil})  // "hello" 1
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Masukan string # dari belakang:")
     s.InsertLast(&Node{"#", nil})       // "hello" 1 "#"
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Masukan float 13.9 dari belakang:")
     s.InsertLast(&Node{13.9, nil})      // "hello" 1 "#" 13.9
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Masukan integer(14) ke posisi N yaitu 4(3, index mulai dari 0):")
     s.InsertNth(&Node{14, nil},3)       // "hello" 1 "#" 14 13.9
     s.Print()
+
+
+    fmt.Println()
+    fmt.Println("Hapus Head:")
     s.DeleteFirst()                     // 1 "#" 14 13.9
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Hapus Tail:")
     s.DeleteLast()                      // 1 "#" 14
+    s.Print()
+
+    fmt.Println()
+    fmt.Println("Hapus Posisi N yaitu 2(1, index mulai dari 0):")
     s.DeleteNth(1)                      // 1 14
     s.Print()
+
+    fmt.Println()
+    fmt.Println("Hapus semuanya:")
     s.DeleteAll()                       // empty
     s.Print()
+
+    fmt.Println()
+    fmt.Println("Masukan 5 integer dari belakang(tail):")
     for i := 0; i < 5; i++ {
         s.InsertLast(&Node{i, nil})
-    }                                   // 0 1 2 3 4
+        s.Print()
+    }   // 0 1 2 3 4
+
+    fmt.Println()
+    fmt.Println("Kondisi saat ini:")
     s.Print()
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi n yaitu 4(3, index mulai dari 0) ke depan:")
     s.MoveNthToFirst(3)                 // 3 0 1 2 4
+    s.Print()
+
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi n yaitu 2(1, index mulai dari 0) ke tail/belakang:")
     s.MoveNthToLast(1)                  // 3 1 2 4 0
+    s.Print()
+
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi n yaitu 3(2, index mulai dari 0) ke posisi n yaitu 5(4, index mulai dari 0):")
     s.MoveNthToNth(2,4)                 // 3 1 4 0 2
+    s.Print()
+
+
+    fmt.Println()
+    fmt.Println("Pindahkan posisi n yaitu 4(3, index mulai dari 0) ke posisi n yaitu 2(1, index mulai dari 0):")
     s.MoveNthToNth(3,1)                 // 3 0 1 4 2
     s.Print()
 }
