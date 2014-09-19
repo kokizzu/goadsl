@@ -15,4 +15,15 @@ ChangeLog:
 
 TODO:
 =====
-* add fmt.Println("test name") on main on SinglyLinkedList and DoublyLinkedList
+
+* (empty)
+
+BOUNTY:
+=======
+
+* implement SingleCircularLinkedList, DoubleCircularLinkedList +150 each
+* implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +200 each
+* implement VList +300
+* implement Skiplist +350
+* implement SliceDeque +200 (use 2 slice for always O(1) operations)
+
