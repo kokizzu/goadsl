@@ -12,6 +12,7 @@ ChangeLog:
 * 2014-09-14 fixed InsertLast() and Print() method in singly linked list, added doubly linked list (Dikaimin)
 * 2014-09-16 added queue (Rizal)
 * 2014-09-16 fixed SliceQueue (Dikaimin)
+* 2014-09-22 added singly circular linked list and doubly circular linked list (Dikaimin)
 
 TODO:
 =====
@@ -26,4 +27,3 @@ BOUNTY:
 * implement VList +300
 * implement Skiplist +350
 * implement SliceDeque +200 (use 2 slice for always O(1) operations)
-
