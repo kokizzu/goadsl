@@ -13,11 +13,12 @@ ChangeLog:
 * 2014-09-16 added queue (Rizal)
 * 2014-09-16 fixed SliceQueue (Dikaimin)
 * 2014-09-22 added singly circular linked list and doubly circular linked list (Dikaimin)
+* 2014-09-22 added SliceDeque (Rizal)
 
 TODO:
 =====
 
-* (empty)
+* please update this file also when completing bounty
 
 BOUNTY:
 =======
@@ -25,7 +26,6 @@ BOUNTY:
 * implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +200 each
 * implement VList +300
 * implement Skiplist +350
-* implement SliceDeque +200 (use 2 slice for always O(1) operations)
 * implement HashFunction +50 each
 * implement ChainingHashtable +200 for each type (Linked Bucket, BST Bucket, Array Bucket)
 * implement ClosedHashtable +200 for each CollisionFunction
