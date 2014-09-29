@@ -19,6 +19,7 @@ TODO:
 =====
 
 * please update this file also when completing bounty
+* don't forget to add testcases
 
 BOUNTY:
 =======
@@ -31,3 +32,4 @@ BOUNTY:
 * implement ClosedHashtable +200 for each CollisionFunction
 * implement ArrayHash +250 for string value
 * implement HashArrayTree +200
+* implement ArrayBinaryTree, LinkBinaryTree, ArrayBST, LinkBST +300 each (with BFS printing)
