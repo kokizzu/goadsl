@@ -14,6 +14,7 @@ ChangeLog:
 * 2014-09-16 fixed SliceQueue (Dikaimin)
 * 2014-09-22 added singly circular linked list and doubly circular linked list (Dikaimin)
 * 2014-09-22 added SliceDeque (Rizal)
+* 2014-10-02 added LinkBST (Dikaimin)
 
 TODO:
 =====
@@ -32,4 +33,4 @@ BOUNTY:
 * implement ClosedHashtable +200 for each CollisionFunction
 * implement ArrayHash +250 for string value
 * implement HashArrayTree +200
-* implement ArrayBinaryTree, LinkBinaryTree, ArrayBST, LinkBST +300 each (with BFS printing)
+* implement ArrayBinaryTree, LinkBinaryTree, ArrayBST +300 each (with BFS printing)
