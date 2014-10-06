@@ -34,3 +34,8 @@ BOUNTY:
 * implement ArrayHash +250 for string value
 * implement HashArrayTree +200
 * implement ArrayBinaryTree, LinkBinaryTree, ArrayBST +300 each (with BFS printing)
+* implement AVLTree, RBTree, SplayTree +250, ArrayAVL, ArrayRB, ArraySplay +300
+* implement SliceHeap +100, BSTHeap +100
+* implement Trie +300, CompressedTrie +600, BurstTrie +800, HATTrie +1000
+* implement QuickSort, HeapSort, MergeSort, CombSort, etc, that allow Less interface etc +300
+* implement BinarySearch, JumpSearch, InterpolationSearch +100
