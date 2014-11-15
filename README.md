@@ -25,17 +25,17 @@ TODO:
 BOUNTY:
 =======
 
-* implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +400 each
-* implement VList +600
-* implement Skiplist +700
-* implement HashFunction +100 each
-* implement ChainingHashtable +400 for each type (Linked Bucket, BST Bucket, Array Bucket)
-* implement ClosedHashtable +400 for each CollisionFunction
-* implement ArrayHash +500 for string value
-* implement HashArrayTree +400
-* implement ArrayBinaryTree, LinkBinaryTree, ArrayBST +600 each (with BFS printing)
-* implement AVLTree, RBTree, SplayTree +500, ArrayAVL, ArrayRB, ArraySplay +600
-* implement SliceHeap +200, BSTHeap +200
-* implement Trie +400, CompressedTrie +1200, BurstTrie +1600, HATTrie +2000
-* implement QuickSort, HeapSort, MergeSort, CombSort, etc, that allow Less interface etc +500 each
-* implement BinarySearch, JumpSearch, InterpolationSearch +200 each
+* implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +800 each
+* implement VList +1200
+* implement Skiplist +1400
+* implement HashFunction +200 each
+* implement ChainingHashtable +800 for each type (Linked Bucket, BST Bucket, Array Bucket)
+* implement ClosedHashtable +800 for each CollisionFunction
+* implement ArrayHash +1000 for string value
+* implement HashArrayTree +800
+* implement ArrayBinaryTree, LinkBinaryTree, ArrayBST +1200 each (with BFS printing)
+* implement AVLTree, RBTree, SplayTree +1500, ArrayAVL, ArrayRB, ArraySplay +600
+* implement SliceHeap +400, BSTHeap +400
+* implement Trie +800, CompressedTrie +2400, BurstTrie +3200, HATTrie +4000
+* implement QuickSort +1000, HeapSort +400, Non-recursive Inplace MergeSort +1200, CombSort +600, etc, that allow Less interface
+* implement BinarySearch, JumpSearch, InterpolationSearch +400 that Allow Less, Equal interface
