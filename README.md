@@ -39,3 +39,5 @@ BOUNTY:
 * implement Trie +1200, CompressedTrie +3200, BurstTrie +4800, HATTrie +6000
 * implement QuickSort +1500, HeapSort +500, Non-recursive Inplace MergeSort +1500, CombSort +800, etc, that allow Less interface
 * implement BinarySearch, JumpSearch, InterpolationSearch +400 that Allow Less, Equal interface
+* implement R-Tree +3000, k-d Tree +2000
+* implement any other data structure or algorithm (bounty may vary, contact me for details)
