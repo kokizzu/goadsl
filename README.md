@@ -15,6 +15,7 @@ ChangeLog:
 * 2014-09-22 added singly circular linked list and doubly circular linked list (Dikaimin)
 * 2014-09-22 added SliceDeque (Rizal)
 * 2014-10-02 added LinkBST (Dikaimin)
+* 2014-12-11 added QuickSort, CombSort, Heapsort (Agung)
 
 TODO:
 =====
@@ -37,7 +38,7 @@ BOUNTY:
 * implement AVLTree +2500, RBTree +3000, SplayTree +2000, ArrayAVL, ArrayRB, ArraySplay +4000
 * implement SliceHeap +900, BSTHeap +600
 * implement Trie +3500, CompressedTrie +5500, BurstTrie +8000, HATTrie +12500
-* implement QuickSort +1500, HeapSort +500, Non-recursive Inplace MergeSort +1500, CombSort +800, etc, that allow Less interface
+* implement Non-recursive Inplace MergeSort +1500, etc, that allow Less interface
 * implement BinarySearch, JumpSearch, InterpolationSearch +400 that Allow Less, Equal interface
 * implement R-Tree +5000, k-d Tree +8000 (using reflection)
 * implement any other data structure or algorithm (bounty may vary, contact me for details)
