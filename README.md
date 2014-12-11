@@ -16,7 +16,7 @@ ChangeLog:
 * 2014-09-22 added SliceDeque (Rizal)
 * 2014-10-02 added LinkBST (Dikaimin)
 * 2014-12-11 added QuickSort, CombSort, Heapsort (Agung)
-* 2014-12-11 added CocktailSort (Alvreda)
+* 2014-12-11 added CocktailSort, added Non-recursive Inplace MergeSort (Alvreda)
 
 TODO:
 =====
