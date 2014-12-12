@@ -27,6 +27,7 @@ TODO:
 BOUNTY:
 =======
 
+* fix LinkedBST so it can store Anything, not just int +500
 * implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +1200 each
 * implement VList +1600
 * implement Skiplist +4000
