@@ -7,7 +7,7 @@ type Interface interface{}
 
 type Node struct {
 	Key []byte
-	Value int
+	Value Interface
 	Link *Node
 	Next *Node
 	}
@@ -170,5 +170,7 @@ func main() {
 	fmt.Print("Searching for 'TestSearch': ")
 	fmt.Println(radix.Search("TestSearch"))
 	fmt.Print("Searching for 'AkuStres': ")
-	fmt.Println(radix.Search("AkuStres': ") //Testcase for non-existing Key
+	fmt.Println(radix.Search("AkuStres': ")) //Testcase for non-existing Key
+	fmt.Print("Searching for '123': ")
+	fmt.Println(radix.Search("123': "))
 	}
