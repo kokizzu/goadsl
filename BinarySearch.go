@@ -1,27 +1,68 @@
 package main
-import "fmt"
-func binarySearch(a []float64, x float64, l, r int) int { //O(log n)
-    if r < l {		//kondisi jika data yang dicari tidak ditemukan (karena dalam rekursi r terus di increment maka saat r<l berarti data tidak ada)
-        return -1	//mengembalikan -1
-    }
-    mid := (l + r) / 2 //mencari nilai tengah
-    if a[mid] > x { //jika nilai dari posisi tengah array lebih besar dari nilai yang dicari 
-        return binarySearch(a, x, l, mid-1) //maka akan dipanggil rekursi dengan perubahan parameter, sekarang rentang pencarian berkurang (berubah kearah kiri)
-    } else if a[mid] < x { //jika nilai dari posisi tengah array lebih kecil dari nilai yang dicari 
-        return binarySearch(a, x, mid+1, r) //maka akan dipanggil rekursi dengan perubahan parameter, sekarang rentang pencarian berkurang (berubah kearah kanan)
-    }
-    return mid //jika pencarian sudah selesai maka nilai mid yang dikembalikan sebagai posisi nilai yang dicari dalam array
+import (
+	"fmt"
+	
+)
+
+type Interface interface{
+	Len() int
+	More(i int, j interface{}) bool
+	Less(i int, j interface{}) bool
 }
+
+type arrInt []int
+func (f arrInt) Len() int { return len(f) }
+func (f arrInt) More(i int, j interface{}) bool { return f[i] > j.(int) }
+func (f arrInt) Less(i int, j interface{}) bool { return f[i] < j.(int) }
+
+type arrString []string
+func (f arrString) Len() int { return len(f) }
+func (f arrString) More(i int,j interface{}) bool {return f[i] > j.(string) }
+func (f arrString) Less(i int,j interface{}) bool {return f[i] < j.(string) }
+
+
+func binarySearch(a Interface, value interface{}) int {  //O(log n)
+	low := 0
+	high := a.Len() - 1
+	for low <= high {
+		mid := (low + high) / 2
+		if a.More(mid,value) {
+			high = mid - 1
+		} else if a.Less(mid,value) {
+			low = mid + 1
+		} else {
+			return mid
+		}
+	}
+	return -1
+}
+
 func main(){
-	list := []float64{1, 2, 3, 4, 5}
-	var yang_dicari float64
+	var one int
+	list := make(arrInt, 10)
+	for i := 0; i < 10; i++ {
+		list[i] = i
+		
+	}
 	fmt.Println("nilai yang dicari?")
-	fmt.Scan(&yang_dicari)
-	posisi:=(binarySearch(list, yang_dicari, 0,4))
-	//rentang pencarian dari 0 sampai n-1 (karena array dimulai dengan index 0)
+	fmt.Scan(&one)
+	posisi:=(binarySearch(list, one))
 	if posisi == -1 {
 		fmt.Println("nilai yang anda cari tidak ditemukan")
 	}else {
-	fmt.Println("nilai yang anda cari ada di array elemen ke", posisi)
+		fmt.Println("nilai yang anda cari ada di array elemen ke", posisi)
+	}
+
+	var two string
+	posisi=0
+	Ss := make(arrString, 6)
+	Ss[0], Ss[1], Ss[2], Ss[3], Ss[4], Ss[5] = "contoh", "binary", "search", "biasa","asd", "go"
+	fmt.Println("kata yang dicari?")
+	fmt.Scan(&two)
+	posisi=(binarySearch(Ss, two))
+	if posisi == -1 {
+		fmt.Println("kata yang anda cari tidak ditemukan")
+	}else {
+		fmt.Println("kata yang anda cari ada di array elemen ke", posisi)
 	}
 }
