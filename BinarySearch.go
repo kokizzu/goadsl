@@ -38,31 +38,71 @@ func binarySearch(a Interface, value interface{}) int {  //O(log n)
 }
 
 func main(){
-	var one int
+
 	list := make(arrInt, 10)
 	for i := 0; i < 10; i++ {
-		list[i] = i
+		list[i] = i+1
 		
 	}
-	fmt.Println("nilai yang dicari?")
-	fmt.Scan(&one)
-	posisi:=(binarySearch(list, one))
+	
+	posisi:=(binarySearch(list, 1))
 	if posisi == -1 {
-		fmt.Println("nilai yang anda cari tidak ditemukan")
+		fmt.Println("data yang dicari tidak ditemukan")
 	}else {
-		fmt.Println("nilai yang anda cari ada di array elemen ke", posisi)
+		fmt.Println("ada di ada di array elemen ke", posisi)
 	}
+	posisi =(binarySearch(list, 10))
+	if posisi == -1 {
+		fmt.Println("data yang dicari tidak ditemukan")
+	}else {
+		fmt.Println("ada di ada di array elemen ke", posisi)
+	}
+	posisi =(binarySearch(list, 5))
+	if posisi == -1 {
+		fmt.Println("data yang dicari tidak ditemukan")
+	}else {
+		fmt.Println("ada di ada di array elemen ke", posisi)
+	}
+	posisi =(binarySearch(list, 13))
+	if posisi == -1 {
+		fmt.Println("data yang dicari tidak ditemukan")
+	}else {
+		fmt.Println("ada di ada di array elemen ke", posisi)
+	}
+	
 
-	var two string
+	
 	posisi=0
 	Ss := make(arrString, 6)
-	Ss[0], Ss[1], Ss[2], Ss[3], Ss[4], Ss[5] = "contoh", "binary", "search", "biasa","asd", "go"
-	fmt.Println("kata yang dicari?")
-	fmt.Scan(&two)
-	posisi=(binarySearch(Ss, two))
+	Ss[0], Ss[1], Ss[2], Ss[3], Ss[4], Ss[5] = "ab", "abc", "abcd", "abcdf", "abcdefg", "abcdefgh"
+	
+	
+	posisi =(binarySearch(Ss, "ab" ))
 	if posisi == -1 {
 		fmt.Println("kata yang anda cari tidak ditemukan")
 	}else {
-		fmt.Println("kata yang anda cari ada di array elemen ke", posisi)
+		fmt.Println("ada di array elemen ke", posisi)
 	}
+	posisi =(binarySearch(Ss, "abcdefgh" ))
+	if posisi == -1 {
+		fmt.Println("kata yang anda cari tidak ditemukan")
+	}else {
+		fmt.Println("ada di array elemen ke", posisi)
+	}
+	posisi =(binarySearch(Ss, "abcd" ))
+	if posisi == -1 {
+		fmt.Println("kata yang anda cari tidak ditemukan")
+	}else {
+		fmt.Println("ada di array elemen ke", posisi)
+	}
+	posisi =(binarySearch(Ss, "a" ))
+	if posisi == -1 {
+		fmt.Println("kata yang anda cari tidak ditemukan")
+	}else {
+		fmt.Println("ada di array elemen ke", posisi)
+	}
+	
+	
+	
+	
 }
