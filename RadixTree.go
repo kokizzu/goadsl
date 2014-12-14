@@ -68,7 +68,7 @@ func (node *Node) search(b []byte) *Node {
 
 //Insert helper
 //Big O = O(N)
-func (node *Node) insert(b []byte, i int) *Node {
+func (node *Node) insert(b []byte, i Interface) *Node {
 	k := node.Prefix(b)
 	if k == 0 {
 		if node.Next == nil {
@@ -111,7 +111,7 @@ func (node *Node) delete(b []byte) *Node {
 			if (node.Link != nil) && (node.Link.Next == nil) {
 				node.Merge()
 				}
-			}	
+			}
 		}
 	return node
 	}
@@ -128,7 +128,7 @@ func NewRadixTree() *RadixTree {
 
 //Search for str in the Tree
 //Big O for Search O(N)
-func (radix *RadixTree) Search(str string) (int, bool) {
+func (radix *RadixTree) Search(str string) (Interface, bool) {
 	node := radix.Root.search(append([]byte(str),0))
 	if node == nil { return 0, false }
 	return node.Value, true
@@ -136,7 +136,7 @@ func (radix *RadixTree) Search(str string) (int, bool) {
 
 //Insert str into the Tree with i as its value
 //Big O for Insert O(N)
-func (radix *RadixTree) Insert(str string, i int) {
+func (radix *RadixTree) Insert(str string, i Interface) {
 	radix.Root.insert(append([]byte(str),0),i)
 	}
 
@@ -149,8 +149,8 @@ func (radix *RadixTree) Delete(str string) {
 func main() {
 	radix := NewRadixTree()
 	radix.Insert("Test",5)
-	radix.Insert("Search",10)
-	radix.Insert("TestSearch",100)
+	radix.Insert("Search",0.10)
+	radix.Insert("TestSearch","abc")
 	fmt.Print("Searching for 'Test': ")
 	fmt.Println(radix.Search("Test"))
 	fmt.Print("Searching for 'Search': ")
@@ -171,6 +171,4 @@ func main() {
 	fmt.Println(radix.Search("TestSearch"))
 	fmt.Print("Searching for 'AkuStres': ")
 	fmt.Println(radix.Search("AkuStres': ")) //Testcase for non-existing Key
-	fmt.Print("Searching for '123': ")
-	fmt.Println(radix.Search("123': "))
 	}
