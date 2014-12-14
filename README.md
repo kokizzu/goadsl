@@ -17,6 +17,7 @@ ChangeLog:
 * 2014-10-02 added LinkBST (Dikaimin)
 * 2014-12-11 added QuickSort, CombSort, Heapsort (Agung)
 * 2014-12-11 added CocktailSort, added Non-recursive MergeSort (Alvreda)
+* 2014-12-15 added BinarySearch (Siti)
 
 TODO:
 =====
@@ -41,6 +42,6 @@ BOUNTY:
 * implement SliceHeap +900, BSTHeap +600
 * implement Trie +3600, CompressedTrie +5500, BurstTrie +8000, HATTrie +12500
 * implement Non-recursive Inplace MergeSort +1800, other sorting algorithms, that allow Less/Equal/Swap/Len interface
-* implement BinarySearch, JumpSearch, InterpolationSearch +400 that Allow Less/Equal interface
+* implement JumpSearch, InterpolationSearch +400 that Allow Less/Equal interface
 * implement R-Tree +5000, k-d Tree +8000 (using reflection)
 * implement any other data structure or algorithm (bounty may vary, contact me for details)
