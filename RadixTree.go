@@ -3,6 +3,8 @@
 package main
 import "fmt"
 
+type Interface interface{}
+
 type Node struct {
 	Key []byte
 	Value int
@@ -10,10 +12,14 @@ type Node struct {
 	Next *Node
 	}
 
+//Return a new node
+//Big O = O(1)
 func NewNode() *Node {
 	return &Node{}
 	}
 
+//Find the length of the prefix from node's key with b
+//Big O = O(N)
 func (node *Node) Prefix(b []byte) int {
 	for i := 0; i < len(b); i++ {
 		if i == len(node.Key) || node.Key[i] != b[i] {
@@ -23,6 +29,8 @@ func (node *Node) Prefix(b []byte) int {
 	return len(b)
 	}
 
+//Split the node's key with k as the separation point
+//Big O = O(1)
 func (node *Node) Split(k int) {
 	newnode := NewNode()
 	newnode.Key = node.Key[k:]
@@ -33,6 +41,8 @@ func (node *Node) Split(k int) {
 	node.Key = node.Key[:k]
 	}
 
+//Merge the node with it's link
+//Big O = O(1)
 func (node *Node) Merge() {
 	link := node.Link
 	node.Key = append(node.Key,link.Key...)
@@ -40,6 +50,8 @@ func (node *Node) Merge() {
 	node.Link = link.Link
 	}
 
+//Search helper
+//Big O = O(N)
 func (node *Node) search(b []byte) *Node {
 	k := node.Prefix(b)
 	if k == 0 {
@@ -54,6 +66,8 @@ func (node *Node) search(b []byte) *Node {
 	return nil
 	}
 
+//Insert helper
+//Big O = O(N)
 func (node *Node) insert(b []byte, i int) *Node {
 	k := node.Prefix(b)
 	if k == 0 {
@@ -81,6 +95,8 @@ func (node *Node) insert(b []byte, i int) *Node {
 	return node
 	}
 
+//Delete helper
+//Big O = O(N)
 func (node *Node) delete(b []byte) *Node {
 	k := node.Prefix(b)
 	if k == 0 {
@@ -104,6 +120,8 @@ type RadixTree struct {
 	Root *Node
 	}
 
+//Return new radix tree
+//Big O = O(1)
 func NewRadixTree() *RadixTree {
 	return &RadixTree{NewNode()}
 	}
@@ -144,5 +162,7 @@ func main() {
 	fmt.Print("Searching for 'Search': ")
 	fmt.Println(radix.Search("Search"))
 	fmt.Print("Searching for 'TestSearch': ")
-	fmt.Println(radix.Search("TestSearch"))	
+	fmt.Println(radix.Search("TestSearch"))
+	fmt.Print("Searching for 'AkuStres': ")
+	fmt.Println(radix.Search("AkuStres': ") //Testcase for non-existing Key
 	}
