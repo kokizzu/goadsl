@@ -19,6 +19,7 @@ ChangeLog:
 * 2014-12-11 added CocktailSort, added Non-recursive MergeSort (Alvreda)
 * 2014-12-13 added Shellsort( versi biasa, Ciura, Knuth) (Marcelinus Devin)
 * 2014-12-14 added Dijkstra (Alvreda)
+* 2014-12-14 added RadixTree (Ahalim)
 
 TODO:
 =====
@@ -46,3 +47,4 @@ BOUNTY:
 * implement BinarySearch, JumpSearch, InterpolationSearch +400 that Allow Less/Equal interface
 * implement R-Tree +5000, k-d Tree +8000 (using reflection)
 * implement any other data structure or algorithm (bounty may vary, contact me for details)
+
