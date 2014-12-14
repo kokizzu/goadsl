@@ -125,16 +125,22 @@ type RadixTree struct {
 func NewRadixTree() *RadixTree {
 	return &RadixTree{NewNode()}
 	}
+
+//Search for str in the Tree
 //Big O for Search O(N)
 func (radix *RadixTree) Search(str string) (int, bool) {
 	node := radix.Root.search(append([]byte(str),0))
 	if node == nil { return 0, false }
 	return node.Value, true
 	}
+
+//Insert str into the Tree with i as its value
 //Big O for Insert O(N)
 func (radix *RadixTree) Insert(str string, i int) {
 	radix.Root.insert(append([]byte(str),0),i)
 	}
+
+//Delete str from the Tree
 //Big O for Delete O(N)
 func (radix *RadixTree) Delete(str string) {
 	radix.Root.delete(append([]byte(str),0))
