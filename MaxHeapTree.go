@@ -67,7 +67,6 @@ func main() {
         if u, ok := h.Pop(); ok { fmt.Println(u) }
     }
 	
-	
     hs := NewHeap()
     hs.Push(String("baca"))
     hs.Push(String("tidur"))
