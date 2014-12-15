@@ -15,11 +15,12 @@ func (s String) Less(a interface{}) bool { return s < a.(String) }
 type Heap struct {
     data []Interface
 }
-
+// O(1)
 func NewHeap() *Heap {
     return &Heap{make([]Interface,0,0)}
 }
 
+// O(log n)
 func (h *Heap) Push(data Interface) {
     h.data = append(h.data,data)
     cur := len(h.data)-1
@@ -31,6 +32,8 @@ func (h *Heap) Push(data Interface) {
     }
 }
 
+
+// O(log n)
 func (h *Heap) Pop() (data Interface, ok bool) {
     if len(h.data) == 0 { return Int(0), false }
     data, ok = h.data[0], true
