@@ -23,6 +23,7 @@ ChangeLog:
 * 2014-12-14 added RadixTree (Ahalim)
 * 2014-12-15 added BinarySearch (Siti)
 * 2014-12-15 added SliceHeap (Siti)
+* 2014-12-15 added Skiplist (Cicih)
 
 TODO:
 =====
@@ -36,7 +37,6 @@ BOUNTY:
 * fix LinkedBST so it can store Anything, not just int +500
 * implement UnrolledSinglyLinkedList, UnrolledDoubleLinkedList +1200 each
 * implement VList +1600
-* implement Skiplist +4000
 * implement HashFunction +300 each
 * implement ChainingHashtable +1600 for each type (Linked Bucket, BST Bucket, Array Bucket)
 * implement ClosedHashtable +1200 for each CollisionFunction
