@@ -22,6 +22,7 @@ ChangeLog:
 * 2014-12-14 added Dijkstra (Alvreda)
 * 2014-12-14 added RadixTree (Ahalim)
 * 2014-12-15 added BinarySearch (Siti)
+* 2014-12-15 added SliceHeap (Siti)
 
 TODO:
 =====
@@ -43,7 +44,7 @@ BOUNTY:
 * implement HashArrayTree +1200
 * implement ArrayBinaryTree, LinkBinaryTree, ArrayBST +1900 each (with BFS printing)
 * implement AVLTree +2500, RBTree +3400, SplayTree +2000, ArrayAVL, ArrayRB, ArraySplay +4000
-* implement SliceHeap +900, BSTHeap +600
+* implement BSTHeap +600
 * implement Trie +3600, CompressedTrie +5500, BurstTrie +8000, HATTrie +12500
 * implement Non-recursive Inplace MergeSort +1800, other sorting algorithms, that allow Less/Equal/Swap/Len interface
 * implement JumpSearch, InterpolationSearch +400 that Allow Less/Equal interface
