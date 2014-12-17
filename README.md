@@ -17,7 +17,6 @@ ChangeLog:
 * 2014-10-02 added LinkBST (Dikaimin)
 * 2014-12-11 added QuickSort, CombSort, Heapsort (Agung)
 * 2014-12-11 added CocktailSort, added Non-recursive MergeSort (Alvreda)
-<<<<<<< HEAD
 * 2014-12-13 added Shellsort( versi biasa, Ciura, Knuth) (Marcelinus Devin)
 * 2014-12-14 added Dijkstra (Alvreda)
 * 2014-12-14 added RadixTree (Ahalim)
