@@ -24,7 +24,7 @@ ChangeLog:
 * 2014-12-15 added BinarySearch (Siti)
 * 2014-12-15 added SliceHeap (Siti)
 * 2014-12-15 added Skiplist (Cicih)
-* 2014-12-17 added Knapsack 0-1 (Alvreda)
+* 2014-12-17 added Knapsack 0-1, Knapsack Unbounded (Alvreda)
 
 TODO:
 =====
