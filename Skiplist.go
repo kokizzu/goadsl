@@ -186,21 +186,25 @@ func main() {
           sl.draw() // 4-5-6-9-
            
           valuenya,ketemu:=sl.Search(Int(5)) // Found! = 5
-          fmt.Println(valuenya) // 2
+          fmt.Println(valuenya) //2
           fmt.Println(ketemu) // true
           valuenya,ketemu=sl.Search(Int(4)) // Found! = 4
           fmt.Println(valuenya) //4
           fmt.Println(ketemu) // true
-          valuenya,ketemu=sl.Search(Int(6)) //Found! = 6
-          fmt.Println(valuenya) // 1
+          valuenya,ketemu=sl.Search(Int(6)) // Found! = 6
+          fmt.Println(valuenya) //1
           fmt.Println(ketemu) // true
                valuenya,ketemu=sl.Search(Int(9)) // Found! = 9
           fmt.Println(valuenya) //0
-          fmt.Println(ketemu) //true
+          fmt.Println(ketemu) // true
                    
                sl.Delete(Int(5))
                sl.draw() // 4---6-9-
-               
+               valuenya,ketemu=sl.Search(Int(5)) //  No Match Found!
+          fmt.Println(valuenya) //<nil>
+          fmt.Println(ketemu) // false
+          sl.draw() // 4---6-9-
+          
                rand.Seed(8)   
                s2 := New()
           s2.Set(String("h"), 1)
@@ -224,6 +228,10 @@ func main() {
                    
                s2.Delete(String("i"))
                s2.draw() // c-h---s-
+               valuenya,ketemu=s2.Search(String("i")) // No Match Found!
+          fmt.Println(valuenya) //<nil>
+          fmt.Println(ketemu) // false
+          s2.draw() // c-h---s-
 
 
     }
